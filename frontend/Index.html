@@ -1,0 +1,123 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevStorm</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body class="dark-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">DevStorm</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="toggle-switch">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle">🌙</label>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Ignite Your SaaS Vision with <span>DevStorm</span></h1>
+      <p>Tech-powered innovation for the future</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+    <canvas id="bg-animation"></canvas>
+  </section>
+
+  <section id="services" class="section">
+    <h2 data-aos="fade-down">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-box" data-aos="zoom-in">
+        <h3>Web Development</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Social Media Handling</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Brand Management</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="300">
+        <h3>App Development</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="400">
+        <h3>AI Integration</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="500">
+        <h3>Chatbot Creation</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="600">
+        <h3>Data Science Services</h3>
+      </div>
+      <div class="service-box" data-aos="zoom-in" data-aos-delay="700">
+        <h3>AI Agents</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <h2 data-aos="fade-down">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member" data-aos="flip-left">
+        <img src="images/p1.webp" alt="Sarib Memon" />
+        <h4>Sarib Memon</h4>
+        <p>CEO & Co-Founder</p>
+      </div>
+      <div class="team-member" data-aos="flip-left">
+        <img src="images/p1.webp" alt="Muhammad Maaz" />
+        <h4>Muhammad Maaz</h4>
+        <p>CTO & Co-Founder</p>
+      </div>
+      <div class="team-member" data-aos="flip-left">
+        <img src="images/p1.webp" alt="Muhammad Ali" />
+        <h4>Muhammad Ali</h4>
+        <p>Lead Developer & Co-Founder</p>
+      </div>
+      <div class="team-member" data-aos="flip-left">
+        <img src="images/p1.webp" alt="Fatima Noor" />
+        <h4>Muhammad Muaz</h4>
+        <p>UI/UX Designer & Co-Founder</p>
+      </div>
+      <div class="team-member" data-aos="flip-left">
+        <img src="images\p1.webp" alt="Muhammad Owais" />
+        <h4>Muhammad Owais</h4>
+        <p>Marketing Lead & Co-Founder</p>
+      </div>
+      <div class="team-member" data-aos="flip-left">
+        <img src="images/p1.webp" alt="Zohaib Shahzad" />
+        <h4>Zohaib Shahzad</h4>
+        <p>Frontend Developer & Co-Founder</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 data-aos="fade-down">Contact Us</h2>
+    <form id="contact-form" action="/contact" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="tel" name="phone" placeholder="Your Phone Number" required />
+
+  <button type="submit">Send</button>
+</form>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DevStorm. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* styles.css */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s, color 0.5s;
+  scroll-behavior: smooth;
+}
+
+body.light-mode {
+  background: #eef6ff;
+  color: #111;
+}
+
+body.dark-mode {
+  background: #0d1117;
+  color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #121a27;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #00ffd5;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #00ffd5;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1a26, #1a2935);
+  color: #fff;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: #00ffd5;
+  text-shadow: 0 0 15px #00ffd5;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00ffd5a0;
+}
+
+.cta-button:hover {
+  background: #00e6bf;
+}
+
+#bg-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: radial-gradient(circle, #0d1a26 0%, #1a2935 100%);
+}
+
+/* Sections */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-box {
+  background: rgba(0, 255, 213, 0.05);
+  border: 1px solid #00ffd533;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ffd566;
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.team-member {
+  background: rgba(0, 255, 213, 0.05);
+  border: 1px solid #00ffd533;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.1);
+}
+
+.team-member img {
+  width: 100%;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid #00ffd544;
+}
+
+.team-member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #00ffd566;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #00ffd5, #00b3a6);
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 12px #00ffd566;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffd5;
+}
+
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: #0a0a0a;
+  color: #aaa;
+  margin-top: 4rem;
+}
